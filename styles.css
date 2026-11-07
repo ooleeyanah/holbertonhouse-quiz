@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    --webb-light-red: #ff5473;
+    --webb-red: #e31b3f;
+    --hopper-light-yellow: #ffd679;
+    --hopper-yellow: #fcb20b;
+    --hamilton-light-green: #a6bd1c;
+    --hamilton-green: #669324;
+    --lovelace-light-blue: #6e9cd5;
+    --lovelace-blue: #2b4b74;
+    --btn: #2596be;
+    --font-white: #fff;
+    --font-black: #222;
+}
+
+.geo-regular {
+    font-family: "Geo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.geo-regular-italic {
+    font-family: "Geo", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.coda-regular {
+    font-family: "Coda", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.coda-extrabold {
+    font-family: "Coda", system-ui;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Geo", sans-serif;
+    font-size: 50px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Coda", sans-serif;
+    background: linear-gradient(to right, var(--webb-red), var(--hopper-light-yellow), var(--hamilton-light-green), var(--lovelace-light-blue));
+    color: var(--font-black);
+}
+
+.box {
+    padding: 2rem;
+    mask: radial-gradient(40px at 40px 40px, #0000 98%, #000) -40px -40px;
+    background: #fff;
+}
+
+.ribbon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-inline: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+.ribbon h2 {
+    margin: 0;
+    font-family: "Geo", sans-serif;
+    font-size: 70px;
+}
+
+.ribbon {
+    --s: 1.8em;
+    --d: .5em;
+    /* the depth */
+    --c: .8em;
+    /* the cutout part */
+
+    padding: 0 calc(var(--s) + var(--d) + .5em) var(--d);
+    line-height: 1.8;
+    background:
+        linear-gradient(90deg, #0004 var(--d), #0000 0 calc(100% - var(--d)), #0004 0) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+    clip-path: polygon(0 100%, var(--s) 100%, calc(var(--s) + var(--d)) calc(100% - var(--d)), calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), calc(100% - var(--s)) 100%, 100% 100%, calc(100% - var(--c)) calc(50% + var(--d)/2), 100% var(--d), calc(100% - var(--s)) var(--d), calc(100% - var(--s) - var(--d)) 0, calc(var(--s) + var(--d)) 0, var(--s) var(--d), 0 var(--d), var(--c) calc(50% + var(--d)/2));
+    background-color: var(--ribbon-color, #E3AD40);
+    width: fit-content;
+}
+
+#result[data-house="hamilton"] .ribbon {
+    --ribbon-color: var(--hamilton-green);
+}
+
+#result[data-house="lovelace"] .ribbon {
+    --ribbon-color: var(--lovelace-blue);
+}
+
+#result[data-house="hopper"] .ribbon {
+    --ribbon-color: var(--hopper-yellow);
+}
+
+#result[data-house="webb"] .ribbon {
+    --ribbon-color: var(--webb-red);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+#choices {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+h2#question {
+    font-weight: 200;
+    font-size: 25px;
+}
+
+button {
+    font: inherit;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--lovelace-light-blue);
+    border-radius: 8px;
+    background: var(--btn);
+    color: var(--font-white);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+button:hover,
+button:focus-visible,
+button.primary {
+    background: #4a5ad9;
+    color: #fff;
+}
+
+button.primary {
+    display: block;
+    margin-inline: auto;
+}
+
+button.primary:hover {
+    background: #3846b0;
+}
+
+#progress {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+#result-breakdown {
+    list-style: none;
+    padding: 0;
+}
+
+#result-breakdown li {
+    margin-bottom: 0.6rem;
+    text-align: left;
+}
+
+.bar {
+    height: 0.7rem;
+    margin-top: 0.2rem;
+    background: #e5e5e5;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--bar-color);
+}
+
+#result-breakdown li[data-house="hamilton"] {
+    --bar-color: var(--hamilton-green);
+}
+
+#result-breakdown li[data-house="lovelace"] {
+    --bar-color: var(--lovelace-blue);
+}
+
+#result-breakdown li[data-house="hopper"] {
+    --bar-color: var(--hopper-yellow);
+}
+
+#result-breakdown li[data-house="webb"] {
+    --bar-color: var(--webb-red);
+}

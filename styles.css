@@ -91,6 +91,53 @@ body {
     width: fit-content;
 }
 
+.result-intro {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#result-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    flex: 0 0 120px;
+}
+
+#result-desc {
+    flex: 1;
+    margin: 0;
+    padding: 1rem;
+    max-width: 50vw;
+}
+
+#result-quote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 5px solid var(--ribbon-color, var(--lovelace-blue));
+    background: #f5f5f5;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 60vw;
+}
+
+#result[data-house="hamilton"] {
+    --description-color: var(--font-black);
+}
+
+#result[data-house="lovelace"] {
+    --description-color: var(--font-black);
+}
+
+#result[data-house="hopper"] {
+    --description-color: var(--font-black);
+}
+
+#result[data-house="webb"] {
+    --description-color: var(--font-black);
+}
+
 #result[data-house="hamilton"] .ribbon {
     --ribbon-color: var(--hamilton-green);
 }

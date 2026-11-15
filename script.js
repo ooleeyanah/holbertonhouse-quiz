@@ -32,8 +32,8 @@ const QUESTIONS = [
         choices: [
             { text: "Working with a peer on an unfinished coding task", house: "lovelace" },
             { text: "Checking on my repos to clean up merge conflicts", house: "hamilton" },
-            { text: "Researching new technologies and frameworks", house: "hopper" },
-            { text: "Completing coding puzzles on Codewars or LEETcode", house: "webb" },
+            { text: "Researching new technologies and frameworks", house: "webb" },
+            { text: "Completing coding puzzles on Codewars or LEETcode", house: "hopper" },
         ],
     },
     {
@@ -41,8 +41,8 @@ const QUESTIONS = [
         choices: [
             { text: "PLDrinks!", house: "lovelace" },
             { text: "Playing video games", house: "hamilton" },
-            { text: "Snoozing on the beanbag", house: "hopper" },
-            { text: "Going out for coffee", house: "webb" },
+            { text: "Snoozing on the beanbag", house: "webb" },
+            { text: "Going out for coffee", house: "hopper" },
         ],
     },
     {
@@ -70,6 +70,51 @@ const QUESTIONS = [
             { text: "The AI bubble is gonna burst, badly", house: "hamilton" },
             { text: "There is such a thing as too many comments", house: "hopper" },
             { text: "Backend is way more interesting than frontend", house: "webb" },
+        ],
+    },
+    {
+        text: "What is your main pet peeve when it comes to other people's code?",
+        choices: [
+            { text: "When it's clearly stolen or vibe-coded", house: "lovelace" },
+            { text: "When there's no tests. Why are there literally no tests??", house: "hamilton" },
+            { text: "There are very obvious errors and bugs", house: "hopper" },
+            { text: "There are no comments. None.", house: "webb" },
+        ],
+    },
+    {
+        text: "You're in a job interview. What would you tell the interviewer is your main strength?",
+        choices: [
+            { text: "My solutions are creative. I love thinking out of the box!", house: "lovelace" },
+            { text: "I always keep security as a priority when I develop a program", house: "hamilton" },
+            { text: "My passion is efficiency. I never hesitate to refactor code when necessary", house: "hopper" },
+            { text: "I'm always reading up on new tech tools and other people's perspectives", house: "webb" },
+        ],
+    },
+    {
+        text: "You're in a group preparing for Demo Day. Which role would you volunteer for?",
+        choices: [
+            { text: "Frontend or UX/UI Designer", house: "lovelace" },
+            { text: "Technical Team Leader or Fullstack", house: "hamilton" },
+            { text: "Something in backend", house: "hopper" },
+            { text: "Whatever needs to be done. I don't really mind", house: "webb" },
+        ],
+    },
+    {
+        text: "Someone asks you to write technical documentation. How do you respond?",
+        choices: [
+            { text: "Good timing, I was just thinking about that!", house: "lovelace" },
+            { text: "Why don't we spread the workload and each write one section?", house: "hamilton" },
+            { text: "Nah, I'd rather proofread after someone else does it", house: "hopper" },
+            { text: "Sure", house: "webb" },
+        ],
+    },
+    {
+        text: "What does your LinkedIn profile look like?",
+        choices: [
+            { text: "An up-to-date photo of me and details about my projects & jobs", house: "lovelace" },
+            { text: "The main details of my experience and some articles I've written/reposted", house: "hamilton" },
+            { text: "I don't have LinkedIn", house: "hopper" },
+            { text: "Just the facts, nothing fancy", house: "webb" },
         ],
     },
 ];
